@@ -61,14 +61,16 @@ function About() {
           </p>
         </div>
 
-        {/* Right - Image */}
-        <div className="md:w-1/2 w-full flex justify-center mt-12 md:mt-0">
-          <img
-            src="Logo.png"
-            alt="About Us"
-            className="rounded-xl shadow-lg max-w-full h-auto"
-          />
-        </div>
+      {/* Right - Animation */}
+<div className="md:w-1/2 w-full flex justify-center mt-12 md:mt-0">
+  <iframe
+    src="https://lottie.host/embed/77138eb2-581b-467c-b127-b96cc386c8f3/f9ODzQ5374.lottie"
+    className="w-full h-96 rounded-xl shadow-lg "
+    allowFullScreen
+    title="About Us Animation"
+  ></iframe>
+</div>
+
       </div>
 
       {/* Values Section */}
