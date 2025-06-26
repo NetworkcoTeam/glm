@@ -14,10 +14,10 @@ const Navbar = () => {
       <div className="flex items-center justify-between">
         {/* Left Nav Links - Desktop */}
         <div className="hidden md:flex gap-6 font-extrabold">
-          <Link to="/" className="hover:text-gray-500">Home</Link>
-          <Link to="/about" className="hover:text-gray-500">About</Link>
-          <Link to="/service" className="hover:text-gray-500">Services</Link>
-          <Link to="/portfolio" className="hover:text-gray-500">Portfolio</Link>
+          <Link to="/" className="hover:text-amber-500">Home</Link>
+          <Link to="/about" className="hover:text-amber-500">About</Link>
+          <Link to="/service" className="hover:text-amber-500">Services</Link>
+          <Link to="/portfolio" className="hover:text-amber-500">Portfolio</Link>
         </div>
 
         {/* Center Logo */}
@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Right Contact Link - Desktop + Mobile Toggle */}
         <div className="flex items-center gap-4 ml-auto">
           <div className="hidden md:block font-extrabold">
-            <Link to="/ContactUs" className="hover:text-gray-500">Contact Us</Link>
+            <Link to="/ContactUs" className="hover:text-amber-500">Contact Us</Link>
           </div>
 
           <button
@@ -54,11 +54,11 @@ const Navbar = () => {
             <X size={32} />
           </button>
 
-          <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-gray-500">Home</Link>
-          <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-gray-500">About</Link>
-          <Link to="/service" onClick={() => setIsOpen(false)} className="hover:text-gray-500">Services</Link>
-          <Link to="/portfolio" onClick={() => setIsOpen(false)} className="hover:text-gray-500">Portfolio</Link>
-          <Link to="/ContactUs" onClick={() => setIsOpen(false)} className="hover:text-gray-500">Contact Us</Link>
+          <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-amber-500">Home</Link>
+          <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-amber-500">About</Link>
+          <Link to="/service" onClick={() => setIsOpen(false)} className="hover:text-amber-500">Services</Link>
+          <Link to="/portfolio" onClick={() => setIsOpen(false)} className="hover:text-amber-500">Portfolio</Link>
+          <Link to="/ContactUs" onClick={() => setIsOpen(false)} className="hover:text-amber-500">Contact Us</Link>
         </div>
       )}
     </nav>
