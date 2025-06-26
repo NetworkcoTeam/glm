@@ -34,14 +34,14 @@ function Footer() {
             <div className="hidden lg:block">
               <ul className="space-y-2 text-[hsl(190,60%,90%)]">
                 <li>Email: info@glmedia.co.za</li>
-                <li>Phone: +27 83276 7446</li>
+                <li>Phone: +27 83 276 7446</li>
               </ul>
             </div>
             <div className="lg:hidden flex space-x-4">
               <a href="mailto:info@glmedia.co.za" className="text-[hsl(190,60%,90%)] hover:text-amber-400 transition duration-300">
                 <Mail className="h-6 w-6" />
               </a>
-              <a href="tel:+27 83276 7446" className="text-[hsl(190,60%,90%)] hover:text-amber-400 transition duration-300">
+              <a href="tel:+27 83 276 7446" className="text-[hsl(190,60%,90%)] hover:text-amber-400 transition duration-300">
                 <Phone className="h-6 w-6" />
               </a>
             </div>
