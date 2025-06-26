@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import  '../CSSNeeded/VRBackground.css'
+import Footer from './Footer';
 
 
 function HomePage() {
@@ -53,6 +54,7 @@ function HomePage() {
           />
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer"; // ✅ Import Footer
 
 function About() {
   const [hoveredTeamId, setHoveredTeamId] = useState(null);
@@ -77,39 +78,29 @@ function About() {
 
           {/* Cards */}
           <div className="flex flex-wrap justify-center gap-6">
-            {/* Card 1 */}
-            <div className="w-full sm:w-[280px] bg-gray-900 rounded-lg p-6 hover:shadow-2xl transition-all duration-300 ease-in-out text-center">
-              <h3 className="text-xl font-semibold text-amber-600 mb-3">INNOVATION</h3>
-              <p className="text-white">
-                We value bold ideas and future-thinking in our content and strategy.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="w-full sm:w-[280px] bg-gray-900 rounded-lg p-6 hover:shadow-2xl transition-all duration-300 ease-in-out text-center">
-              <h3 className="text-xl font-semibold text-amber-600 mb-3">CREATIVITY</h3>
-              <p className="text-white">
-                We pride ourselves on visual storytelling that is elevated and artistic.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="w-full sm:w-[280px] bg-gray-900 rounded-lg p-6 hover:shadow-2xl transition-all duration-300 ease-in-out text-center">
-              <h3 className="text-xl font-semibold text-amber-600 mb-3">INTEGRITY</h3>
-              <p className="text-white">
-                We maintain transparency and excellence in every deliverable.
-              </p>
-            </div>
+            {[
+              { title: "INNOVATION", text: "We value bold ideas and future-thinking in our content and strategy." },
+              { title: "CREATIVITY", text: "We pride ourselves on visual storytelling that is elevated and artistic." },
+              { title: "INTEGRITY", text: "We maintain transparency and excellence in every deliverable." },
+            ].map((value, index) => (
+              <div
+                key={index}
+                className="w-full sm:w-[280px] bg-gray-900 rounded-lg p-6 hover:shadow-2xl transition-all duration-300 ease-in-out text-center"
+              >
+                <h3 className="text-xl font-semibold text-amber-600 mb-3">{value.title}</h3>
+                <p className="text-white">{value.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Team Section - Horizontally aligned, no scroll, with hover effect */}
+      {/* Team Section */}
       <section className="bg-gradient-to-r from-black via-gray-800 to-gray-700 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-amber-200 mb-12">Meet the Team</h2>
 
-          <div className="flex flex-wrap justify-center gap-10 ">
+          <div className="flex flex-wrap justify-center gap-10">
             {teamMembers.map(({ id, name, role, desc, img }) => {
               const isHovered = hoveredTeamId === id;
               const isOtherHovered = hoveredTeamId !== null && !isHovered;
@@ -119,8 +110,7 @@ function About() {
                   key={id}
                   onMouseEnter={() => setHoveredTeamId(id)}
                   onMouseLeave={() => setHoveredTeamId(null)}
-                  className={`
-                    w-full sm:w-64 bg-gray-900 rounded-xl p-6 transition-all duration-300 border-amber-500 border-2 text-center cursor-pointer
+                  className={`w-full sm:w-64 bg-gray-900 rounded-xl p-6 transition-all duration-300 border-amber-500 border-2 text-center cursor-pointer
                     ${isHovered ? "scale-110 shadow-2xl" : ""}
                     ${isOtherHovered ? "blur-sm scale-90" : ""}
                   `}
@@ -139,6 +129,9 @@ function About() {
           </div>
         </div>
       </section>
+
+      {/* ✅ Footer at the bottom */}
+      <Footer />
     </>
   );
 }
