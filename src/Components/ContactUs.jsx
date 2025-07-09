@@ -27,14 +27,14 @@ export default function ContactUs() {
     <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-gray-700 text-white">
       <Navbar />
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <h1 className="text-4xl font-bold text-center text-amber-200 mb-12 mt-10">Contact Us</h1>
+        <h1 className="text-4xl font-bold text-center text-amber-200 mb-12 mt-10">CONTACT US</h1>
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="flex flex-col space-y-6 justify-center">
-            <h2 className="text-2xl font-semibold text-amber-300 italic">Get in Touch</h2>
+            <h2 className="text-2xl font-semibold text-amber-300 italic">GET IN TOUCH</h2>
             <p className="text-amber-600">We’d love to hear from you. Drop us a line and we’ll get back to you shortly.</p>
             <p className="text-sm text-amber-600">1 asparagus street, halfway house</p>
-            <p className="text-sm text-amber-600">Phone: +27 83276 7446</p>
+            <p className="text-sm text-amber-600">Phone: +27 83 276 7446</p>
             <p className="text-sm text-amber-600">Email: info@glmedia.co.za</p>
             <iframe
               src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3999.7004613787294!2d28.11587512119798!3d-25.99947361302395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956e03321dfeed%3A0xfbcf71c416a7003f!2s1%20Asparagus%20Rd%2C%20Halfway%20Gardens%2C%20Midrand%2C%201686!5e0!3m2!1sen!2sza!4v1750929473853!5m2!1sen!2sza"

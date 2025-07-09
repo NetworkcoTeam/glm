@@ -37,7 +37,7 @@ function Portfolio() {
 
       {/* Hero Section */}
       <section className="text-center py-16 px-4">
-        <h2 className="text-4xl font-bold text-amber-300 mb-4">Welcome to Our Portfolio</h2>
+        <h2 className="text-4xl font-bold text-amber-300 mb-4 sm:py-8">WELCOME TO OUR PORTFOLIO</h2>
         <p className="text-gray-300 text-lg">
           Below are the projects we have participated in:
         </p>
@@ -48,7 +48,7 @@ function Portfolio() {
         id="projects"
         className="py-10 px-6 bg-gradient-to-r from-black via-gray-800 to-gray-700"
       >
-        <h3 className="text-3xl font-bold text-center text-amber-300 mb-10">Projects</h3>
+        <h3 className="text-3xl font-bold text-center text-amber-300 mb-10">PROJECTS</h3>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <div
@@ -77,13 +77,13 @@ function Portfolio() {
 
       {/* Contact Section */}
       <section id="contact" className="py-16 px-6 text-center ">
-        <h3 className="text-3xl font-bold text-amber-300 mb-6">Get in Touch</h3>
+        <h3 className="text-3xl font-bold text-amber-300 mb-6">GET IN TOUCH</h3>
         <p className="mb-4 text-gray-400">Feel free to reach out for collaborations or just to say hi!</p>
         <a
           href="mailto:info@glmedia.co.za"
           className="bg-amber-500 text-black px-6 py-2 rounded hover:bg-amber-400 transition"
         >
-          Contact Me
+          Contact Us
         </a>
       </section>
 

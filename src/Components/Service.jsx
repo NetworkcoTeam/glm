@@ -1,6 +1,11 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Linkedin, Instagram } from 'lucide-react';
+import { FaTiktok } from 'react-icons/fa';
+import { SlSocialLinkedin } from "react-icons/sl";
+import { IoLogoInstagram } from "react-icons/io";
 
 const services = [
   {
@@ -25,7 +30,7 @@ const services = [
   },
   {
     title: "Videography",
-    description: "High-quality video production for marketing campaigns and storytelling. We create high-quality videos that showcase your brand, products, or events in a powerful way. From concept to final edit, we handle filming, directing, and editing to tell your story visually. Whether it’s for social media, ads, or your website — we make sure your videos grab attention and leave a lasting impression.",
+    description: "High-quality video production for marketing campaigns and storytelling. We create high-quality videos that showcase your brand, products, or events in a powerful way. From concept to final edit, we handle filming, directing, and editing to tell your story visually. Whether it’s for social media, ads, or your website— we make sure your videos grab attention and leave a lasting impression.",
     iframe: "https://lottie.host/embed/6d18cc6c-8122-48b7-bd08-9ba230b75cb0/mT5RVNUZoq.lottie",
   },
 ];
@@ -42,6 +47,43 @@ const style = `
   }
   .rotate-y-180 {
     transform: rotateY(180deg);
+  }
+  .iso-pro {
+    transition: all 0.5s;
+    position: relative;
+  }
+  .iso-pro:hover .social-svg {
+    transform: translate(15px, -15px) scale(1.25);
+    border-radius: 100%;
+  }
+  .iso-span {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1877f2;
+    border: 1px solid #1877f2;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+                inset 0 0 5px rgba(255, 255, 255, 0.5),
+                0 5px 5px rgba(0, 0, 0, 0.164);
+    border-radius: 50%;
+    transition: all 0.3s;
+    height: 24px;
+    width: 24px;
+  }
+  .iso-pro:hover .iso-span {
+    opacity: 1;
+  }
+  .iso-pro:hover .iso-span:nth-child(2) {
+    opacity: 0.2;
+  }
+  .iso-pro:hover .iso-span:nth-child(3) {
+    opacity: 0.4;
+    transform: translate(5px, -5px);
+  }
+  .iso-pro:hover .iso-span:nth-child(4) {
+    opacity: 0.6;
+    transform: translate(10px, -10px);
   }
 `;
 
@@ -70,9 +112,9 @@ function FlipCard({ title, description, iframe }) {
             <h2 className="text-base font-semibold text-amber-400 text-center italic mb-2">{title}</h2>
             <p className="text-xs text-center leading-relaxed">{description}</p>
           </div>
-          <button className="mt-4 px-4 py-1 bg-amber-500 text-black text-sm font-semibold rounded-lg hover:bg-amber-400 transition self-center">
+          <Link to="/ContactUs" className="mt-4 px-4 py-1 bg-amber-500 text-black text-sm font-semibold rounded-lg hover:bg-amber-400 transition self-center block text-center">
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -86,7 +128,7 @@ export default function Service() {
       <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-gray-700 text-white">
         <Navbar />
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <h1 className="mt-12 text-4xl font-bold text-center text-amber-200 mb-12">Our Services</h1>
+          <h1 className="mt-12 text-4xl font-bold text-center text-amber-200 mb-12">OUR SERVICES</h1>
           <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
             {services.map((service, index) => (
               <FlipCard
@@ -96,6 +138,44 @@ export default function Service() {
                 iframe={service.iframe}
               />
             ))}
+          </div>
+          <div className="mt-12 h-64 mx-auto p-6 rounded-2xl backdrop-blur-sm">
+            <h1 className="font-semibold text-amber-500 mb-4 text-center text-2xl">SOCAIL MEDIA</h1>
+            <div className="flex justify-center space-x-36">
+              <div className="iso-pro">
+                <a
+                  href="https://www.linkedin.com/company/gold-label-media/"
+                  className="text-white hover:text-amber-400 transition duration-300"
+                >
+                  <SlSocialLinkedin className="social-svg h-40 w-30 p-2 text-amber-200 hover:text-amber-600 fill-current" />
+                  <span className="iso-span"></span>
+                  <span className="iso-span"></span>
+                  <span className="iso-span"></span>
+                </a>
+              </div>
+              <div className="iso-pro">
+                <a
+                  href="https://www.instagram.com/goldlabelmedia_sa?igsh=M2YzZzViZmk4dHlo"
+                  className="text-white hover:text-amber-400 transition duration-300"
+                >
+                  <IoLogoInstagram className="social-svg h-40 w-30 p-2 text-amber-200 hover:text-amber-600 fill-current" />
+                  <span className="iso-span"></span>
+                  <span className="iso-span"></span>
+                  <span className="iso-span"></span>
+                </a>
+              </div>
+              <div className="iso-pro">
+                <a
+                  href="https://www.tiktok.com/@gold.label.media?_t=ZS-8xWbBCiIRdw&_r=1"
+                  className="text-white hover:text-amber-400 transition duration-300"
+                >
+                  <FaTiktok className="social-svg h-40 w-30 p-2 rounded-full text-amber-200 hover:text-amber-600 fill-current" />
+                  <span className="iso-span"></span>
+                  <span className="iso-span"></span>
+                  <span className="iso-span"></span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <Footer />

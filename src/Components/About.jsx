@@ -45,7 +45,7 @@ function About() {
       <div className="min-h-screen bg-gradient-to-r from-black via-gray-800 to-gray-700 text-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20">
         {/* Left - Text */}
         <div className="md:w-1/2 w-full md:pr-12">
-          <h2 className="text-4xl font-bold mb-6 mt-12 text-amber-200">About Us</h2>
+          <h2 className="text-4xl font-bold mb-6 mt-12 text-amber-200">ABOUT US</h2>
           <p className="text-lg leading-relaxed">
             At
             <span className="text-amber-500 font-semibold"> GOLD LABEL MEDIA</span>, we are a results-driven marketing agency dedicated to helping businesses grow through strategic, creative, and insight-driven marketing.
@@ -53,7 +53,7 @@ function About() {
             From social media magic to full-blown brand makeovers, we help businesses (big and small) find their voices, grow their audience, and stand out.
           </p>
 
-          <h2 className="text-4xl font-bold mb-6 mt-12 text-amber-200">Mission</h2>
+          <h2 className="text-4xl font-bold mb-6 mt-12 text-amber-200">MISSION</h2>
           <p className="text-lg leading-relaxed">
             We exist to redefine creativity in the digital space by delivering premium, research-based marketing solutions that merge social impact with luxury content.
             <br /><br />
@@ -76,7 +76,7 @@ function About() {
       {/* Values Section */}
       <section className="bg-gradient-to-r from-black via-gray-800 to-gray-700 py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10 text-amber-200">Our Values</h2>
+          <h2 className="text-3xl font-bold text-center mb-10 text-amber-200">OUR VALUES</h2>
 
           {/* Cards */}
           <div className="flex flex-wrap justify-center gap-6">
@@ -100,7 +100,7 @@ function About() {
       {/* Team Section */}
       <section className="bg-gradient-to-r from-black via-gray-800 to-gray-700 py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-amber-200 mb-12">Meet the Team</h2>
+          <h2 className="text-3xl font-bold text-amber-200 mb-12">MEET THE TEAM</h2>
 
           <div className="flex flex-wrap justify-center gap-10">
             {teamMembers.map(({ id, name, role, desc, img }) => {
