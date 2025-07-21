@@ -53,7 +53,7 @@ function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-900 border-2 border-amber-600 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center p-4"
+              className="group bg-gray-900 hover:bg-amber-100 border-2 border-amber-600 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center p-4"
             >
               {/* Image(s) */}
               <div className="flex justify-center items-center mb-4">
@@ -62,21 +62,25 @@ function Portfolio() {
                     key={imgIndex}
                     src={imgSrc}
                     alt={`${project.title} ${imgIndex + 1}`}
-                    className=" h-40 object-cover rounded-3xl"
+                    className="h-40 object-cover rounded-3xl"
                   />
                 ))}
               </div>
 
               {/* Title & Description */}
-              <h4 className="text-xl font-semibold text-amber-400 mb-2">{project.title}</h4>
-              <p className="text-sm text-gray-300">{project.description}</p>
+              <h4 className="text-xl font-semibold text-amber-400 group-hover:text-gray-900 mb-2">
+                {project.title}
+              </h4>
+              <p className="text-sm text-gray-300 group-hover:text-gray-800">
+                {project.description}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-6 text-center ">
+      <section id="contact" className="py-16 px-6 text-center">
         <h3 className="text-3xl font-bold text-amber-300 mb-6">GET IN TOUCH</h3>
         <p className="mb-4 text-gray-400">Feel free to reach out for collaborations or just to say hi!</p>
         <a
