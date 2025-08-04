@@ -71,7 +71,7 @@ function Portfolio() {
               <h4 className="text-xl font-semibold text-amber-400 group-hover:text-gray-900 mb-2">
                 {project.title}
               </h4>
-              <p className="text-sm text-gray-300 group-hover:text-gray-800">
+              <p className="text-sm text-gray-300 group-hover:text-gray-950">
                 {project.description}
               </p>
             </div>

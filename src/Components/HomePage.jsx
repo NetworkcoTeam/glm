@@ -12,22 +12,22 @@ function HomePage() {
         muted
         loop
         playsInline
+        aria-hidden="true"
       >
         <source src="/1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Content on top of video */}
-      <div className="relative z-10">
+      {/* Content Overlay */}
+      <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar />
 
         {/* Hero Section */}
         <section
           id="home"
-          className="min-h-screen text-white flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-20"
+          className="flex-grow flex items-center justify-center px-4 md:px-16 py-20"
         >
-          {/* Left Text with translucent background */}
-          <div className="md:w-1/2 space-y-6 bg-black bg-opacity-50 backdrop-blur-sm p-6 rounded-xl">
+          <div className="md:w-1/2 bg-black bg-opacity-50 backdrop-blur-sm p-6 rounded-xl space-y-6 text-white">
             <h1 className="text-4xl md:text-5xl font-bold text-amber-200 italic">
               GOLD LABEL MEDIA
             </h1>
@@ -39,11 +39,6 @@ function HomePage() {
               We don’t do boring. Whether you are building a brand, launching a campaign, or in need of logo designs,
               we bring fresh thinking, digital expertise, and effective strategies.
             </p>
-          </div>
-
-          {/* Right Image Section */}
-          <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center ">
-           
           </div>
         </section>
 
