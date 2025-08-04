@@ -43,11 +43,7 @@ function HomePage() {
 
           {/* Right Image Section */}
           <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center ">
-            <img
-              src="GLMO.png"
-              alt="Gold Label"
-              className="rounded-4xl shadow-lg w-full max-w-md object-cover"
-            />
+           
           </div>
         </section>
 

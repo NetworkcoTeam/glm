@@ -6,22 +6,22 @@ function Portfolio() {
   const projects = [
     {
       title: 'RAMChemicals',
-      description: 'A brief description of project one.',
+      description: 'Brand refresh · Label redesign · Socials with personality Ram Chemicals needed a little edge—and we brought it. We started by rebranding their entire look, redesigned all their packaging labels to be clean and modern, then took over their social media. Now their content is fresh, consistent, and actually connects with their audience (yes, even in the chemical space). It’s branding meets science, and it works.',
       image: ['CLM.png'],
     },
     {
-      title: 'Thukusani',
-      description: 'A brief description of project two.',
+      title: 'Takusani',
+      description: 'Insta-ready content · Full platform takeover · Scroll-stopping visuals Networkco trusted us with their digital voice and we ran with it. From Instagram to TikTok, Facebook to LinkedIn, we handled it all. We created content that wasn’t just pretty, but actually performed. Our team shot, styled, edited, and curated everything videos, photos, graphics to keep their platforms buzzing. Basically, we made them look good everywhere.',
       image: ['TakuLogo.png'],
     },
     {
       title: 'The NetworkCo',
-      description: 'A brief description of project three.',
+      description: 'Insta-ready content · Full platform takeover · Scroll-stopping visuals Networkco trusted us with their digital voice and we ran with it. From Instagram to TikTok, Facebook to LinkedIn, we handled it all. We created content that wasn’t just pretty, but actually performed. Our team shot, styled, edited, and curated everything videos, photos, graphics to keep their platforms buzzing. Basically, we made them look good everywhere.',
       image: ['NetC.png'],
     },
     {
       title: 'Cailey Ann Services',
-      description: 'A brief description of project four.',
+      description: 'Branding glow-up · Logo magic · Launch-ready market strategy Cailey Ann came to us ready to shake things up in the real estate training world and we were all in. We gave her brand a full makeover, designed a sleek new logo, and built a campaign strategy that actually made people want to sign up for training. With the right visuals and the right messaging, Cailey Ann brand now speaks directly to future agents who are ready to get licensed and get moving.',
       image: ['1.png'],
     },
     {
