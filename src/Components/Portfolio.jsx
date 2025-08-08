@@ -23,12 +23,7 @@ function Portfolio() {
       title: 'Cailey Ann Services',
       description: 'Branding glow-up · Logo magic · Launch-ready market strategy Cailey Ann came to us ready to shake things up in the real estate training world and we were all in. We gave her brand a full makeover, designed a sleek new logo, and built a campaign strategy that actually made people want to sign up for training. With the right visuals and the right messaging, Cailey Ann brand now speaks directly to future agents who are ready to get licensed and get moving.',
       image: ['1.png'],
-    },
-    {
-      title: 'Gold Label Media',
-      description: 'A brief description of project five.',
-      image: ['Logo.png'],
-    },
+    }
   ];
 
   return (

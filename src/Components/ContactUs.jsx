@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
-import Footer from './Footer'; // Make sure the path is correct
+import Footer from './Footer';
+import emailjs from '@emailjs/browser';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -19,8 +20,33 @@ export default function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', subject: '', message: '', number: '', type: '' });
+
+    // EmailJS send email
+    emailjs
+      .send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone_number: formData.number,
+          enquiry_type: formData.type,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'YOUR_USER_ID' // Replace with your EmailJS User ID
+      )
+      .then(
+        (result) => {
+          console.log('Email sent successfully:', result.text);
+          alert('Message sent successfully!');
+          setFormData({ name: '', email: '', subject: '', message: '', number: '', type: '' });
+        },
+        (error) => {
+          console.error('Email sending failed:', error.text);
+          alert('Failed to send message. Please try again later.');
+        }
+      );
   };
 
   return (
